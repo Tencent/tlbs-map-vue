@@ -1,0 +1,21 @@
+{
+  "name": "vue3-playground",
+  "version": "1.0.0",
+  "private": true,
+  "author": "ChuHoMan",
+  "license": "MIT",
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "dev": "vue-demi-switch 3 vue3 && vite --host --force",
+    "build": "vue-demi-switch 3 vue3 && vite build"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.6.2",
+    "vue": "^3.3.4"
+  }
+}

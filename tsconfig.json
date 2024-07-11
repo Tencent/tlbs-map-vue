@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom", "dom.Iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [ "src/*"]
+    },
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "declaration": true,
+    "outDir": "es",
+    "isolatedModules": false,
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./node_modules/@types", "types"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "demos/**/*.vue",
+    "scripts/**/*.js",
+    "vite.base.config.ts",
+    "env.d.ts",
+    "vue2-playground/main.ts",
+    "vue2.7-playground/main.ts",
+    "vue3-playground/main.ts",
+    "vue2-playground/vite.config.ts",
+    "vue2.7-playground/vite.config.ts",
+    "vue3-playground/vite.config.ts",
+    "types/**/*.ts",
+    ".eslintrc.js"
+  ],
+  "exclude": ["node_modules"]
+}
