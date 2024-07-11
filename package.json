@@ -30,7 +30,7 @@
 		"build:3": "vue-demi-switch 3 vue3 && pnpm --filter vue3-playground build",
 		"build:2.7": "vue-demi-switch 2.7 vue2.7 && pnpm --filter vue2.7-playground build",
 		"build": "rimraf ./dist && npm run build:2 && npm run build:2.7 && npm run build:3",
-		"release": "npm run build && tnpm publish",
+		"release": "npm run build && npm publish",
 		"docs:dev": "vue-demi-switch 3 vue3 && vitepress dev docs --port 4000 --force",
 		"docs:build": "vitepress build docs",
 		"lint": "eslint . --cache --fix",
