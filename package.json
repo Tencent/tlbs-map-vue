@@ -40,8 +40,10 @@
 	"author": "tlbs-map",
 	"license": "MIT",
 	"repository": {
-		"type": "git"
-	},
+    "type": "git",
+    "url": "git+https://github.com/Tencent/tlbs-map-vue.git"
+  },
+  "homepage": "https://github.com/Tencent/tlbs-map-vue",
 	"peerDependencies": {
 		"@vue/composition-api": "^1.4.9",
 		"vue": "^2.6.0 || >=3.0.0"
