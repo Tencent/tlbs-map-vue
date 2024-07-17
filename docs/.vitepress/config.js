@@ -36,8 +36,9 @@ function getSidebar() {
         { text: '折线', link: '/components/multi-polyline' },
         { text: '圆形', link: '/components/multi-circle' },
         { text: '自定义覆盖物', link: '/components/dom-overlay' },
+        { text: '图形编辑器', link: '/components/geometry-editor' },
         { text: '热力图', link: '/components/heat' },
-        { text: '图形编辑器', link: '/components/geometry-editor' }
+        { text: '弧线图', link: '/components/arc' },
       ],
     },
   ];

@@ -24,7 +24,7 @@
 
 参考官网文档 https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocHeat
 
-## 组件实例
+## 组件实例属性
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |

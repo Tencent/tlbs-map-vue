@@ -29,7 +29,7 @@
 | clusterChange   | { scatteredPoint, aggregationPoint}                     |
 其他事件支持列表参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocCluster
 
-## 组件实例
+## 组件实例属性
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |

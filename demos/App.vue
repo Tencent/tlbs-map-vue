@@ -16,12 +16,14 @@
     <CircleDemo />
     <h2>自定义覆盖物</h2>
     <DomOverlay />
-    <h2>热力图</h2>
-    <HeatDemo />
     <h2>地图编辑器</h2>
     <GeometryEditor />
     <h2>文本标记</h2>
     <LabelDemo />
+    <h2>热力图</h2>
+    <HeatDemo />
+    <h2>弧线图</h2>
+    <ArcDemo />
   </div>
 </template>
 
@@ -38,6 +40,7 @@ import PolylineDemo from './multi-polyline.vue';
 import GeometryEditor from './geometry-editor.vue';
 import MarkerCluster from './marker-cluster.vue';
 import MarkerClusterOverlay from './marker-cluster-overlay.vue';
+import ArcDemo from './arc.vue';
 
 export default defineComponent({
   name: 'App',
@@ -53,6 +56,7 @@ export default defineComponent({
     GeometryEditor,
     MarkerCluster,
     MarkerClusterOverlay,
+    ArcDemo,
   },
 });
 </script>

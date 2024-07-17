@@ -52,13 +52,15 @@ export default defineComponent({
       // @ts-ignore
       heatData,
       gradientColor: {
-        0.6: '#673198',
-        0.8: '#e53390',
-        0.9: '#ffc95a',
+        stops: {
+          0.6: '#673198',
+          0.8: '#e53390',
+          0.9: '#ffc95a',
+        },
       },
       options: {
         minZoom: 10,
-        maxZoom: 15,
+        // maxZoom: 15,
       },
     };
   },

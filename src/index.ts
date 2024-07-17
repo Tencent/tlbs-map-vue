@@ -10,17 +10,19 @@ import MultiLabel from './multi-label';
 import DomOverlay from './dom-overlay';
 import Heat from './heat';
 import GeometryEditor from './geometry-editor';
+import Arc from './arc';
 
 const components = [BaseMap, MultiMarker, MultiPolygon, MultiPolyline, MultiCircle, DomOverlay, MultiLabel, Heat,
-  GeometryEditor, MarkerCluster,
+  GeometryEditor, MarkerCluster, Arc,
 ];
 // 导出各个组件
 export { BaseMap, MultiMarker, MultiPolygon, MultiPolyline, MultiCircle, MultiLabel, DomOverlay, Heat, GeometryEditor,
   MarkerCluster,
+  Arc,
 };
 // 提供安装方法
 export default {
   install(app: App): void {
-    components.forEach(component => app.component(component.name, component));
+    components.forEach(component => app.component(component.name as string, component));
   },
 };

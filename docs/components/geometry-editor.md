@@ -2,8 +2,6 @@
 
 图形编辑器组件，当前支持圆形和多边形绘制和编辑
 
-
-
 ## 基础示例
 
 <GeometryEditorDemo/>
@@ -34,3 +32,11 @@
 ## 事件
 
 事件支持列表参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocEditor
+
+## 组件实例属性
+
+| 名称            | 类型                         | 说明                                                 |
+| --------------- | ---------------------------- | ---------------------------------------------------- |
+| polygon         | `TMap.MultiPolygon` | 多边形实例。                                   |
+| circle         | `TMap.MultiCircle` | 圆形实例。                                   |
+| editor         | `TMap.tools.GeometryEditor` | 编辑器实例。                                   |

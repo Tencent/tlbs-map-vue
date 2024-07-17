@@ -147,7 +147,11 @@ export default defineComponent({
     onUnmounted(() => {
       circle.setMap(null);
       polygon.setMap(null);
-      editor.setMap(null);
+      try {
+        editor.setMap(null);
+      } catch (error) {
+        console.error(error);
+      }
     });
     // 监听组件属性
     watch(

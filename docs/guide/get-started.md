@@ -6,7 +6,9 @@
 
 ## 申请腾讯位置服务开发Key
 
-https://lbs.qq.com/dev/console/application/mine
+申请链接：https://lbs.qq.com/dev/console/application/mine
+
+注意：示例文档中使用的key是测试用的key，请勿在线上业务中使用，请您替换为上面链接中申请的key。
 
 ## 引入gl地图引擎（如果给地图组件传apiKey参数则不需要此步骤）
 index.html
