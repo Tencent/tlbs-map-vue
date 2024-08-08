@@ -1,6 +1,6 @@
 {
 	"name": "tlbs-map-vue",
-	"version": "1.1.0-beta.1",
+	"version": "1.1.0",
 	"description": "基于vue的地图组件",
 	"main": "dist/v3/index.umd.js",
 	"module": "dist/v3/index.es.js",
