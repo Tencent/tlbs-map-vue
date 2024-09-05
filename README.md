@@ -12,6 +12,7 @@
 ```bash
 npm install tlbs-map-vue
 ```
+注意：Node需要在16及以上版本才能安装使用组件库
 
 # 基础使用
 vue2框架下使用

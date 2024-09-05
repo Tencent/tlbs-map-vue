@@ -1,6 +1,6 @@
 {
 	"name": "tlbs-map-vue",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "基于vue的地图组件",
 	"main": "dist/v3/index.umd.js",
 	"module": "dist/v3/index.es.js",
@@ -21,6 +21,9 @@
     "README.md",
 		"package.json"
 	],
+	"engines": {
+		"node": ">=16.0.0"
+	},
 	"scripts": {
 		"postinstall": "node scripts/postinstall.js",
 		"dev:2": "vue-demi-switch 2 vue2 && pnpm --filter vue2-playground dev",
