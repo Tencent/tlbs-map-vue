@@ -53,7 +53,7 @@ body:
       placeholder: Vue(3.2.0)
   
   - type: input
-    id: frameworkVersion
+    id: NodeVersion
     attributes:
       label: Node版本
       placeholder: Node(16.0.0)
