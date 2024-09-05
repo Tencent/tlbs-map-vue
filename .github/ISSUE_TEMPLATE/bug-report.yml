@@ -51,6 +51,12 @@ body:
     attributes:
       label: 框架版本
       placeholder: Vue(3.2.0)
+  
+  - type: input
+    id: frameworkVersion
+    attributes:
+      label: Node版本
+      placeholder: Node(16.0.0)
 
   - type: input
     id: browsersVersion
