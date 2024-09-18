@@ -20,13 +20,13 @@ function getSidebar() {
   return [
     {
       text: '开始',
-      children: [
+      items: [
         { text: '快速开始', link: '/guide/get-started' },
       ],
     },
     {
       text: '组件',
-      children: [
+      items: [
         { text: '地图', link: '/components/map' },
         { text: '点标记', link: '/components/multi-marker' },
         { text: '点聚合', link: '/components/marker-cluster' },

@@ -7,7 +7,7 @@
 
 <CircleDemo/>
 
-<<< demos/multi-circle.vue
+<<< ../../demos/multi-circle.vue
 
 ## props
 

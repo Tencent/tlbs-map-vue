@@ -7,7 +7,7 @@
 
 <MarkerClusterDemo/>
 
-<<< demos/marker-cluster.vue
+<<< ../../demos/marker-cluster.vue
 
 ## props
 

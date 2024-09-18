@@ -7,7 +7,7 @@
 
 <ArcDemo/>
 
-<<< demos/arc.vue
+<<< ../../demos/arc.vue
 
 ## props
 

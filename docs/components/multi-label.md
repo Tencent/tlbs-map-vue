@@ -7,7 +7,7 @@
 
 <LabelDemo/>
 
-<<< demos/multi-label.vue
+<<< ../../demos/multi-label.vue
 
 ## props
 

@@ -7,7 +7,7 @@
 
 <MarkerDemo/>
 
-<<< demos/multi-marker.vue
+<<< ../../demos/multi-marker.vue
 
 ## props
 

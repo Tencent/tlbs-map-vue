@@ -158,3 +158,9 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+button {
+  margin-right: 5px;
+  border: 1px solid #ddd;
+}
+</style>

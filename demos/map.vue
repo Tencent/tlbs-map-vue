@@ -63,4 +63,10 @@ export default defineComponent({
   display: flex;
   align-items: center;
 }
+button {
+  padding: 4px;
+  background-color: #fff;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+}
 </style>

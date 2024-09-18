@@ -6,7 +6,7 @@
 
 <GeometryEditorDemo/>
 
-<<< demos/geometry-editor.vue
+<<< ../../demos/geometry-editor.vue
 
 ## props
 

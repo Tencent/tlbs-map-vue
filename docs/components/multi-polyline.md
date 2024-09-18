@@ -7,7 +7,7 @@
 
 <PolylineDemo/>
 
-<<< demos/multi-polyline.vue
+<<< ../../demos/multi-polyline.vue
 
 ## props
 

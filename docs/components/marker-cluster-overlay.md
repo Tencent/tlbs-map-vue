@@ -7,7 +7,7 @@
 
 <MarkerClusterOverlayDemo/>
 
-<<< demos/marker-cluster-overlay.vue
+<<< ../../demos/marker-cluster-overlay.vue
 
 ## props
 

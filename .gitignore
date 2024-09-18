@@ -27,3 +27,4 @@ dist-ssr
 .eslintcache
 package-lock.json
 pnpm-lock.yaml
+cache

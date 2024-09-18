@@ -7,7 +7,7 @@
 
 <PolygonDemo/>
 
-<<< demos/multi-polygon.vue
+<<< ../../demos/multi-polygon.vue
 
 ## props
 

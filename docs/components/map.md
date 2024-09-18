@@ -7,7 +7,7 @@
 
 <MapDemo/>
 
-<<< demos/map.vue
+<<< ../../demos/map.vue
 
 ## props
 

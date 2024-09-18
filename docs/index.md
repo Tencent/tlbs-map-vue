@@ -1,8 +1,13 @@
 ---
-home: true
-heroAlt: Logo image
-heroText: tlbs-map-vue
-tagline: 基于 Vue 的腾讯地图组件库，支持在vue2、vue3项目中使用
-actionText: 开始
-actionLink: /guide/get-started
+layout: home
+hero:
+  name: tlbs-map-vue
+  tagline: 基于 腾讯位置服务 JavaScript API 封装的 Vue 版地图组件库。
+  actions:
+    - theme: brand
+      text: 快速开始
+      link: /guide/get-started
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/Tencent/tlbs-map-vue
 ---

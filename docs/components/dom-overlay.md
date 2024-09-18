@@ -7,7 +7,7 @@
 
 <DomOverlayDemo/>
 
-<<< demos/dom-overlay.vue
+<<< ../../demos/dom-overlay.vue
 
 ## props
 

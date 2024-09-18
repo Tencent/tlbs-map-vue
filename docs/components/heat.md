@@ -7,7 +7,7 @@
 
 <HeatDemo/>
 
-<<< demos/heat.vue
+<<< ../../demos/heat.vue
 
 ## props
 
