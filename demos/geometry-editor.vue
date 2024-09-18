@@ -160,6 +160,8 @@ export default defineComponent({
 </script>
 <style scoped>
 button {
+  padding: 4px;
+  background-color: #fff;
   margin-right: 5px;
   border: 1px solid #ddd;
 }
