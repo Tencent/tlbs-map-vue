@@ -30,6 +30,7 @@ inquirer.prompt([{
   generateFile(docsFilePath, getComponentDocCode(answers.name, answers.zhName));
   insertComponentToDocsTheme(answers.name);
   insertComponentToDocsConfig(answers.name, answers.zhName);
+  console.log('组件文件、示例文件、文档文件创建成功');
 });
 
 
