@@ -38,7 +38,8 @@
 		"docs:build": "vitepress build docs",
 		"lint": "eslint . --cache --fix",
 		"commit": "git-cz",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"new": "node scripts/new-component/index.js"
 	},
 	"author": "tlbs-map",
 	"license": "MIT",
@@ -76,7 +77,9 @@
 		"eslint-plugin-html": "^7.1.0",
 		"eslint-plugin-vue": "^8.5.0",
 		"husky": "^8.0.0",
+		"inquirer": "^11.0.2",
 		"lint-staged": "^10.5.4",
+		"lodash": "^4.17.21",
 		"rimraf": "^3.0.2",
 		"standard-version": "^9.0.0",
 		"tmap-gl-types": "^0.1.8",

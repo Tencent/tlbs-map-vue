@@ -12,11 +12,30 @@ import Heat from './heat';
 import GeometryEditor from './geometry-editor';
 import Arc from './arc';
 
-const components = [BaseMap, MultiMarker, MultiPolygon, MultiPolyline, MultiCircle, DomOverlay, MultiLabel, Heat,
-  GeometryEditor, MarkerCluster, Arc,
+const components = [
+  BaseMap,
+  MultiMarker,
+  MultiPolygon,
+  MultiPolyline,
+  MultiCircle,
+  DomOverlay,
+  MultiLabel,
+  Heat,
+  GeometryEditor,
+  MarkerCluster,
+  Arc,
 ];
 // 导出各个组件
-export { BaseMap, MultiMarker, MultiPolygon, MultiPolyline, MultiCircle, MultiLabel, DomOverlay, Heat, GeometryEditor,
+export {
+  BaseMap,
+  MultiMarker,
+  MultiPolygon,
+  MultiPolyline,
+  MultiCircle,
+  MultiLabel,
+  DomOverlay,
+  Heat,
+  GeometryEditor,
   MarkerCluster,
   Arc,
 };
