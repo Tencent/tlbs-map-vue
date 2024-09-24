@@ -1,5 +1,5 @@
 import inquirer from 'inquirer';
-import { getComponentCode, getComponentDocCode, getDemoCode } from './templates/index.js';
+import { getComponentCode, getComponentDocCode, getDemoCode } from './templates/index.mjs';
 import fs from 'fs';
 import _ from 'lodash';
 import path from 'path';

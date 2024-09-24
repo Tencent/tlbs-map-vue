@@ -39,7 +39,7 @@
 		"lint": "eslint . --cache --fix",
 		"commit": "git-cz",
 		"prepare": "husky install",
-		"new": "node scripts/new-component/index.js"
+		"new": "node scripts/new-component/index.mjs"
 	},
 	"author": "tlbs-map",
 	"license": "MIT",

@@ -40,6 +40,6 @@
     "vue3-playground/vite.config.ts",
     "types/**/*.ts",
     ".eslintrc.js"
-  ],
+, "scripts/new-component/templates/index.mjs", "scripts/new-component/index.mjs"  ],
   "exclude": ["node_modules"]
 }
