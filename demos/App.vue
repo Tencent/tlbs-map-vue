@@ -41,7 +41,6 @@ import GeometryEditor from './geometry-editor.vue';
 import MarkerCluster from './marker-cluster.vue';
 import MarkerClusterOverlay from './marker-cluster-overlay.vue';
 import ArcDemo from './arc.vue';
-import InfoWindow from './info-window.vue';
 
 const components = {
   MapDemo,
