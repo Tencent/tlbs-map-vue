@@ -24,6 +24,8 @@
     <HeatDemo />
     <h2>弧线图</h2>
     <ArcDemo />
+    <h2>信息窗口</h2>
+    <InfoWindow />
   </div>
 </template>
 
@@ -41,6 +43,7 @@ import GeometryEditor from './geometry-editor.vue';
 import MarkerCluster from './marker-cluster.vue';
 import MarkerClusterOverlay from './marker-cluster-overlay.vue';
 import ArcDemo from './arc.vue';
+import InfoWindow from './info-window.vue';
 
 const components = {
   MapDemo,
@@ -55,6 +58,7 @@ const components = {
   MarkerCluster,
   MarkerClusterOverlay,
   ArcDemo,
+  InfoWindow,
 };
 
 export default defineComponent({

@@ -12,6 +12,7 @@ import MarkerCluster from '../../../demos/marker-cluster.vue';
 import MarkerClusterOverlay from '../../../demos/marker-cluster-overlay.vue';
 import Label from '../../../demos/multi-label.vue';
 import Arc from '../../../demos/arc.vue';
+import InfoWindow from '../../../demos/info-window.vue';
 
 const components = [
   Map,
@@ -26,6 +27,7 @@ const components = [
   MarkerClusterOverlay,
   Label,
   Arc,
+  InfoWindow,
 ];
 
 export default {

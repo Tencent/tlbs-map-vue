@@ -30,6 +30,7 @@ function getSidebar() {
     { text: '图形编辑器', link: '/components/geometry-editor' },
     { text: '热力图', link: '/components/heat' },
     { text: '弧线图', link: '/components/arc' },
+    { text: '信息窗口', link: '/components/info-window' },
   ];
   return [
     {

@@ -7,6 +7,11 @@
     :control="control"
     @click="onClick"
   >
+    <div class="control-container">
+      <button @click.stop="switchInfoWindow">
+        {{ visible ? '关闭' : '开启' }}窗口
+      </button>
+    </div>
     <tlbs-heat
       :data="heatData"
       :max="350"
@@ -29,6 +34,7 @@ export default defineComponent({
     const center = ref({ lat: 39.909897147274364, lng: 116.39756310116866 });
     const zoom = ref(11);
     const heatData = ref([]);
+    const visible = ref(true);
     const onClick = (e: Event) => {
       console.log(e);
     };
@@ -38,7 +44,12 @@ export default defineComponent({
       heatData.value = (window as any).heatData || [];
     });
 
+    const switchInfoWindow = () => {
+      visible.value = !visible.value;
+    };
+
     return {
+      visible,
       center,
       zoom,
       onClick,
@@ -62,6 +73,7 @@ export default defineComponent({
         minZoom: 10,
         // maxZoom: 15,
       },
+      switchInfoWindow,
     };
   },
 });
