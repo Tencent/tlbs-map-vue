@@ -11,6 +11,8 @@ import DomOverlay from './dom-overlay';
 import Heat from './heat';
 import GeometryEditor from './geometry-editor';
 import Arc from './arc';
+import Grid from './grid';
+import Area from './area';
 import InfoWindow from './info-window';
 
 const components = [
@@ -25,6 +27,8 @@ const components = [
   GeometryEditor,
   MarkerCluster,
   Arc,
+  Grid,
+  Area,
   InfoWindow,
 ];
 // 导出各个组件
@@ -40,6 +44,8 @@ export {
   GeometryEditor,
   MarkerCluster,
   Arc,
+  Grid,
+  Area,
   InfoWindow,
 };
 // 提供安装方法

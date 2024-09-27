@@ -24,6 +24,10 @@
     <HeatDemo />
     <h2>弧线图</h2>
     <ArcDemo />
+    <h2>网格热力图</h2>
+    <Grid />
+    <h2>区域图</h2>
+    <Area />
     <h2>信息窗口</h2>
     <InfoWindow />
   </div>
@@ -43,6 +47,8 @@ import GeometryEditor from './geometry-editor.vue';
 import MarkerCluster from './marker-cluster.vue';
 import MarkerClusterOverlay from './marker-cluster-overlay.vue';
 import ArcDemo from './arc.vue';
+import Grid from './grid.vue';
+import Area from './area.vue';
 import InfoWindow from './info-window.vue';
 
 const components = {
@@ -58,6 +64,8 @@ const components = {
   MarkerCluster,
   MarkerClusterOverlay,
   ArcDemo,
+  Grid,
+  Area,
   InfoWindow,
 };
 

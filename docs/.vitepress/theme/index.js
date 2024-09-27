@@ -12,6 +12,8 @@ import MarkerCluster from '../../../demos/marker-cluster.vue';
 import MarkerClusterOverlay from '../../../demos/marker-cluster-overlay.vue';
 import Label from '../../../demos/multi-label.vue';
 import Arc from '../../../demos/arc.vue';
+import Grid from '../../../demos/grid.vue';
+import Area from '../../../demos/area.vue';
 import InfoWindow from '../../../demos/info-window.vue';
 
 const components = [
@@ -27,6 +29,8 @@ const components = [
   MarkerClusterOverlay,
   Label,
   Arc,
+  Grid,
+  Area,
   InfoWindow,
 ];
 
