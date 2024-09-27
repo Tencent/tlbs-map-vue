@@ -13,6 +13,7 @@ import GeometryEditor from './geometry-editor';
 import Arc from './arc';
 import Grid from './grid';
 import Area from './area';
+import InfoWindow from './info-window';
 
 const components = [
   BaseMap,
@@ -28,6 +29,7 @@ const components = [
   Arc,
   Grid,
   Area,
+  InfoWindow,
 ];
 // 导出各个组件
 export {
@@ -44,6 +46,7 @@ export {
   Arc,
   Grid,
   Area,
+  InfoWindow,
 };
 // 提供安装方法
 export default {

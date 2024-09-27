@@ -14,6 +14,7 @@ import Label from '../../../demos/multi-label.vue';
 import Arc from '../../../demos/arc.vue';
 import Grid from '../../../demos/grid.vue';
 import Area from '../../../demos/area.vue';
+import InfoWindow from '../../../demos/info-window.vue';
 
 const components = [
   Map,
@@ -30,6 +31,7 @@ const components = [
   Arc,
   Grid,
   Area,
+  InfoWindow,
 ];
 
 export default {
