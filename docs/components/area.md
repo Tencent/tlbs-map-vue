@@ -20,3 +20,9 @@
 | options   | `TMap.visualization.AreaOptions` |  除了上述属性的其他配置参数，点击下面官网文档链接查看             
 
 参考官网文档 https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocArea
+
+## 组件实例属性
+
+| 名称            | 类型                         | 说明                                                 |
+| --------------- | ---------------------------- | ---------------------------------------------------- |
+|    area      | `TMap.visualization.Area` | 区域图层实例。                                   |
