@@ -11,14 +11,39 @@ import DomOverlay from './dom-overlay';
 import Heat from './heat';
 import GeometryEditor from './geometry-editor';
 import Arc from './arc';
+import Grid from './grid';
+import Area from './area';
 
-const components = [BaseMap, MultiMarker, MultiPolygon, MultiPolyline, MultiCircle, DomOverlay, MultiLabel, Heat,
-  GeometryEditor, MarkerCluster, Arc,
-];
-// 导出各个组件
-export { BaseMap, MultiMarker, MultiPolygon, MultiPolyline, MultiCircle, MultiLabel, DomOverlay, Heat, GeometryEditor,
+const components = [
+  BaseMap,
+  MultiMarker,
+  MultiPolygon,
+  MultiPolyline,
+  MultiCircle,
+  DomOverlay,
+  MultiLabel,
+  Heat,
+  GeometryEditor,
   MarkerCluster,
   Arc,
+  Grid,
+  Area,
+];
+// 导出各个组件
+export {
+  BaseMap,
+  MultiMarker,
+  MultiPolygon,
+  MultiPolyline,
+  MultiCircle,
+  MultiLabel,
+  DomOverlay,
+  Heat,
+  GeometryEditor,
+  MarkerCluster,
+  Arc,
+  Grid,
+  Area,
 };
 // 提供安装方法
 export default {

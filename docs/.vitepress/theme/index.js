@@ -12,22 +12,32 @@ import MarkerCluster from '../../../demos/marker-cluster.vue';
 import MarkerClusterOverlay from '../../../demos/marker-cluster-overlay.vue';
 import Label from '../../../demos/multi-label.vue';
 import Arc from '../../../demos/arc.vue';
+import Grid from '../../../demos/grid.vue';
+import Area from '../../../demos/area.vue';
+
+const components = [
+  Map,
+  Marker,
+  Polygon,
+  Polyline,
+  Circle,
+  DomOverlay,
+  Heat,
+  GeometryEditor,
+  MarkerCluster,
+  MarkerClusterOverlay,
+  Label,
+  Arc,
+  Grid,
+  Area,
+];
 
 export default {
   ...theme,
   enhanceApp({ app }) {
     app.use(component);
-    app.component('MapDemo', Map);
-    app.component('MarkerDemo', Marker);
-    app.component('PolygonDemo', Polygon);
-    app.component('PolylineDemo', Polyline);
-    app.component('CircleDemo', Circle);
-    app.component('DomOverlayDemo', DomOverlay);
-    app.component('HeatDemo', Heat);
-    app.component('GeometryEditorDemo', GeometryEditor);
-    app.component('MarkerClusterDemo', MarkerCluster);
-    app.component('MarkerClusterOverlayDemo', MarkerClusterOverlay);
-    app.component('LabelDemo', Label);
-    app.component('ArcDemo', Arc);
+    components.forEach((component) => {
+      app.component(component.name, component);
+    });
   },
 };

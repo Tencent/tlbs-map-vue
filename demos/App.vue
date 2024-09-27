@@ -24,6 +24,10 @@
     <HeatDemo />
     <h2>弧线图</h2>
     <ArcDemo />
+    <h2>网格热力图</h2>
+    <Grid />
+    <h2>区域图</h2>
+    <Area />
   </div>
 </template>
 
@@ -41,23 +45,29 @@ import GeometryEditor from './geometry-editor.vue';
 import MarkerCluster from './marker-cluster.vue';
 import MarkerClusterOverlay from './marker-cluster-overlay.vue';
 import ArcDemo from './arc.vue';
+import Grid from './grid.vue';
+import Area from './area.vue';
+
+const components = {
+  MapDemo,
+  MarkerDemo,
+  PolygonDemo,
+  PolylineDemo,
+  HeatDemo,
+  CircleDemo,
+  LabelDemo,
+  DomOverlay,
+  GeometryEditor,
+  MarkerCluster,
+  MarkerClusterOverlay,
+  ArcDemo,
+  Grid,
+  Area,
+};
 
 export default defineComponent({
   name: 'App',
-  components: {
-    MapDemo,
-    MarkerDemo,
-    PolygonDemo,
-    PolylineDemo,
-    HeatDemo,
-    CircleDemo,
-    LabelDemo,
-    DomOverlay,
-    GeometryEditor,
-    MarkerCluster,
-    MarkerClusterOverlay,
-    ArcDemo,
-  },
+  components,
 });
 </script>
 

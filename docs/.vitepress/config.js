@@ -17,6 +17,22 @@ module.exports = {
 }
 
 function getSidebar() {
+  const componentItmes = [
+    { text: '地图', link: '/components/map' },
+    { text: '点标记', link: '/components/multi-marker' },
+    { text: '点聚合', link: '/components/marker-cluster' },
+    { text: '自定义点聚合', link: '/components/marker-cluster-overlay' },
+    { text: '文本标记', link: '/components/multi-label' },
+    { text: '多边形', link: '/components/multi-polygon' },
+    { text: '折线', link: '/components/multi-polyline' },
+    { text: '圆形', link: '/components/multi-circle' },
+    { text: '自定义覆盖物', link: '/components/dom-overlay' },
+    { text: '图形编辑器', link: '/components/geometry-editor' },
+    { text: '热力图', link: '/components/heat' },
+    { text: '弧线图', link: '/components/arc' },
+    { text: '网格热力图', link: '/components/grid' },
+    { text: '区域图', link: '/components/area' },
+  ];
   return [
     {
       text: '开始',
@@ -26,20 +42,7 @@ function getSidebar() {
     },
     {
       text: '组件',
-      items: [
-        { text: '地图', link: '/components/map' },
-        { text: '点标记', link: '/components/multi-marker' },
-        { text: '点聚合', link: '/components/marker-cluster' },
-        { text: '自定义点聚合', link: '/components/marker-cluster-overlay' },
-        { text: '文本标记', link: '/components/multi-label' },
-        { text: '多边形', link: '/components/multi-polygon' },
-        { text: '折线', link: '/components/multi-polyline' },
-        { text: '圆形', link: '/components/multi-circle' },
-        { text: '自定义覆盖物', link: '/components/dom-overlay' },
-        { text: '图形编辑器', link: '/components/geometry-editor' },
-        { text: '热力图', link: '/components/heat' },
-        { text: '弧线图', link: '/components/arc' },
-      ],
+      items: componentItmes,
     },
   ];
 }
