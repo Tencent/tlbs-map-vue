@@ -158,6 +158,7 @@ export default defineComponent({
     return {
       aggregationPoints,
       scatteredPoints,
+      markerCluster,
     };
   },
   render() {
