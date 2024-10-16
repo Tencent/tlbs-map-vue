@@ -70,7 +70,7 @@ interface ScatteredPointsObj {
   data: TMap.ClusterInfo // 聚合簇属性
 }
 export default defineComponent({
-  name: 'ClusterDemo',
+  name: 'MarkerClusterOverlayDemo',
   setup() {
     const geometries = [
       { position: { lat: 39.99799, lng: 116.397027 } },

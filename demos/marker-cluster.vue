@@ -18,7 +18,7 @@
 import { defineComponent, ref } from 'vue-demi';
 
 export default defineComponent({
-  name: 'ClusterDemo',
+  name: 'MarkerClusterDemo',
   setup() {
     const map = ref(null);
     const center = ref({ lat: 39.91799, lng: 116.397027 });
