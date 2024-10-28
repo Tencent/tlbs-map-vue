@@ -30,6 +30,8 @@
     <Area />
     <h2>信息窗口</h2>
     <InfoWindow />
+    <h2>散点图</h2>
+    <Dot />
   </div>
 </template>
 
@@ -50,6 +52,7 @@ import ArcDemo from './arc.vue';
 import Grid from './grid.vue';
 import Area from './area.vue';
 import InfoWindow from './info-window.vue';
+import Dot from './dot.vue';
 
 const components = {
   MapDemo,
@@ -67,6 +70,7 @@ const components = {
   Grid,
   Area,
   InfoWindow,
+  Dot,
 };
 
 export default defineComponent({

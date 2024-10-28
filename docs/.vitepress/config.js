@@ -33,6 +33,7 @@ function getSidebar() {
     { text: '网格热力图', link: '/components/grid' },
     { text: '区域图', link: '/components/area' },
     { text: '信息窗口', link: '/components/info-window' },
+    { text: '散点图', link: '/components/dot' },
   ];
   return [
     {

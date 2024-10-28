@@ -13,7 +13,7 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-| data         | HeatPoint                                       | 热力数据          |
+| data         | HeatPoint[]                                       | 热力数据          |
 | radius     | Number | 最大辐射半径，默认为50。 | 
 | height | Number                        | 峰值高度，默认为100。   |
 | opacity | Number                        | 全局透明度，取值范围[0，1]，默认为0.8。   |
@@ -22,7 +22,7 @@
 | gradientColor | GradientColor | 渐变颜色，渐变方向由GradientColor对象的angle属性决定，其中渐变色断点集合需符合GradientColor对象规范   |
 | options   | `TMap.visualization.HeatOptions` |  除了上述属性的其他配置参数，点击下面官网文档链接查看             
 
-参考官网文档 https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocHeat
+上述属性数据格式可参考官网文档 https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocHeat
 
 ## 组件实例属性
 

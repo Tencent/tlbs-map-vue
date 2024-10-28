@@ -22,7 +22,7 @@
 | showRange | Number                        | 网格聚合数据显示区间，需要传入正整数，区间外的数据不显示，区间内的数据线性映射到高度区间及颜色层级。   |
 | options   | `TMap.visualization.HeatOptions` |  除了上述属性的其他配置参数，点击下面官网文档链接查看             
 
-参考官网文档 https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocGrid
+上述属性数据格式可参考官网文档 https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocGrid
 
 ## 组件实例属性
 

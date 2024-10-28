@@ -31,7 +31,7 @@ interface Control {
 }
 ```
 
-参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap
+上述属性数据格式可参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap
 
 ## 事件
 

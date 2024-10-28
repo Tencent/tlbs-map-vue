@@ -14,6 +14,7 @@ import Arc from './arc';
 import Grid from './grid';
 import Area from './area';
 import InfoWindow from './info-window';
+import Dot from './dot';
 
 const components = [
   BaseMap,
@@ -30,6 +31,7 @@ const components = [
   Grid,
   Area,
   InfoWindow,
+  Dot,
 ];
 // 导出各个组件
 export {
@@ -47,6 +49,7 @@ export {
   Grid,
   Area,
   InfoWindow,
+  Dot,
 };
 // 提供安装方法
 export default {

@@ -2,7 +2,8 @@ import { onUnmounted, SetupContext, isVue2 } from 'vue-demi';
 // 绑定地图及图层事件
 export default function useEventListener(
   // 可以传地图实例和图层实例
-  instance: TMap.Map | TMap.GeometryOverlay | TMap.tools.GeometryEditor | TMap.MarkerCluster | TMap.InfoWindow,
+  instance: TMap.Map | TMap.GeometryOverlay | TMap.tools.GeometryEditor | TMap.MarkerCluster | TMap.InfoWindow
+  | TMap.visualization.Dot,
   context: SetupContext,
 ): void {
   const eventMap: {[key: string]: () => void} = {};

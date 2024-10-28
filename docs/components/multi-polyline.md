@@ -18,7 +18,7 @@
 | geometries | TMap.PolylineGeometry[]                         | 折线数据数组   |
 | options   | `TMap.MultiPolylineOptions` |  除了上述属性的其他配置参数，点击下面官网文档链接查看                        |
 
-参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocVector#1
+上述属性数据格式可参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocVector#1
 
 ## 事件
 

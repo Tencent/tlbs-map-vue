@@ -18,7 +18,7 @@
 | geometries | TMap.LabelGeometry[]                         | 文本标记数据数组。 |
 | options   | `TMap.MultiLabelOptions` |  除了上述属性的其他配置参数，点击下面官网文档链接查看                        |
 
-参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocVector#13
+上述属性数据格式可参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocVector#13
 
 ## 事件
 

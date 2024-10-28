@@ -23,7 +23,7 @@
 | zoomOnClick | Booblean                                    | 点击聚合数字放大展开,默认为true |
 | options   | `TMap.MarkerClusterOptions` |  除了上述属性的其他配置参数，点击下面官网文档链接查看                        |
 
-文档官网 https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocCluster
+上述属性数据格式可参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocCluster
 
 ## 事件
 
