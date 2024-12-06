@@ -15,40 +15,46 @@
     />
 
     <!-- 聚合点 -->
-    <tlbs-dom-overlay
+    <div
       v-for="(item, index) of aggregationPoints"
       :key="index"
-      :position="item.center"
-      :offset="offset"
     >
-      <div
-        class="polymerization formatClolr"
-        :style="{
-          width: item.width,
-          height: item.height,
-          'line-height': item['line-height']
-        }"
-        @click="domoOverlayClick(item)"
+      <tlbs-dom-overlay
+        :position="item.center"
+        :offset="offset"
       >
-        {{ item.content }}
-      </div>
-    </tlbs-dom-overlay>
+        <div
+          class="polymerization formatClolr"
+          :style="{
+            width: item.width,
+            height: item.height,
+            'line-height': item['line-height']
+          }"
+          @click="domoOverlayClick(item)"
+        >
+          {{ item.content }}
+        </div>
+      </tlbs-dom-overlay>
+    </div>
 
     <!-- 分散点 -->
-    <tlbs-dom-overlay
+    <div
       v-for="(item, index) of scatteredPoints"
       :key="index"
-      :position="item.center"
     >
-      <div
-        class="point_logo point_logo_0"
-        :value="item.poiid"
-        :style="item.transform"
-        @click="openDetail(item)"
+      <tlbs-dom-overlay
+        :position="item.center"
       >
-        <div class="point_logo_polka_dot" />
-      </div>
-    </tlbs-dom-overlay>
+        <div
+          class="point_logo point_logo_0"
+          :value="item.poiid"
+          :style="item.transform"
+          @click="openDetail(item)"
+        >
+          <div class="point_logo_polka_dot" />
+        </div>
+      </tlbs-dom-overlay>
+    </div>
   </tlbs-map>
 </template>
 
