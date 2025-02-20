@@ -34,11 +34,14 @@ interface Control {
 上述属性数据格式可参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap
 
 ## 事件
+| 名称            | 参数                         | 说明                             |
+| --------------- | ---------------------------- | ---------------------------------------------------- |
+| map_inited          | - | 地图实例初始化事件，可以在回调中获取地图实例，参考上面示例代码使用。 |
 
-事件支持列表参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap
+其他事件和GL地图实例事件一致，参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap
 
 ## 组件实例属性
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-| map          | `TMap.Map` | 地图实例。                                   |
+| map          | `TMap.Map` | 地图实例。实例方法[参考](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap)                                   |

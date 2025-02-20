@@ -1,6 +1,6 @@
 <template>
   <tlbs-map
-    ref="map"
+    ref="mapRef"
     api-key="OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"
     :center="center"
     :zoom="zoom"
@@ -13,12 +13,19 @@
         enableBloom: true, // 泛光
       },
     }"
+    @map_inited="onMapInited"
   >
     <tlbs-arc
+      ref="arcRef"
       :data="arcData"
       :pick-style="pickStyle"
       :options="options"
     />
+    <div class="control-container">
+      <button @click.stop="getLayerInstance">
+        打印弧线图实例
+      </button>
+    </div>
   </tlbs-map>
 </template>
 
@@ -32,7 +39,8 @@ interface ArcData extends TMap.visualization.ArcLine {
 export default defineComponent({
   name: 'ArcDemo',
   setup() {
-    const map = ref(null);
+    const mapRef = ref(null);
+    const arcRef = ref(null);
     const center = ref({ lat: 37.80787, lng: 112.269029 });
     const zoom = ref(5);
     const arcData = ref([]);
@@ -41,6 +49,17 @@ export default defineComponent({
       await loadData();
       arcData.value = (window as any).arcData || [];
     });
+
+    const onMapInited = () => {
+      // 地图加载完成后，可以获取地图实例、弧线图实例，调用地图实例、弧线图实例方法
+      console.log(mapRef.value.map);
+      console.log(arcRef.value.arc);
+    };
+
+    const getLayerInstance = () => {
+      // 可以获取弧线图实例，调用弧线图实例方法
+      console.log(arcRef.value.arc);
+    };
 
     return {
       center,
@@ -51,7 +70,10 @@ export default defineComponent({
           position: 'topRight',
         },
       },
-      map,
+      mapRef,
+      arcRef,
+      onMapInited,
+      getLayerInstance,
       // @ts-ignore
       arcData,
       options: {

@@ -1,11 +1,12 @@
 <template>
   <tlbs-map
-    ref="map"
+    ref="mapRef"
     api-key="OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"
     :center="center"
     :zoom="zoom"
     :control="control"
     @click="onClick"
+    @map_inited="onMapInited"
   >
     <div class="control-container">
       <button @click.stop="switchInfoWindow">
@@ -13,6 +14,7 @@
       </button>
     </div>
     <tlbs-heat
+      ref="heatRef"
       :data="heatData"
       :max="350"
       :min="0"
@@ -21,6 +23,11 @@
       :gradient-color="gradientColor"
       :options="options"
     />
+    <div class="control-container">
+      <button @click.stop="getLayerInstance">
+        打印热力图实例
+      </button>
+    </div>
   </tlbs-map>
 </template>
 
@@ -30,7 +37,8 @@ import { defineComponent, ref, onMounted } from 'vue-demi';
 export default defineComponent({
   name: 'HeatDemo',
   setup() {
-    const map = ref(null);
+    const mapRef = ref(null);
+    const heatRef = ref(null);
     const center = ref({ lat: 39.909897147274364, lng: 116.39756310116866 });
     const zoom = ref(11);
     const heatData = ref([]);
@@ -48,6 +56,17 @@ export default defineComponent({
       visible.value = !visible.value;
     };
 
+    const onMapInited = () => {
+      // 地图加载完成后，可以获取地图实例、热力图实例，调用地图实例、热力图实例方法
+      console.log(mapRef.value.map);
+      console.log(heatRef.value.heat);
+    };
+
+    const getLayerInstance = () => {
+      // 可以获取热力图实例，调用热力图实例方法
+      console.log(heatRef.value.heat);
+    };
+
     return {
       visible,
       center,
@@ -59,7 +78,8 @@ export default defineComponent({
           position: 'topRight',
         },
       },
-      map,
+      mapRef,
+      heatRef,
       // @ts-ignore
       heatData,
       gradientColor: {
@@ -74,6 +94,8 @@ export default defineComponent({
         // maxZoom: 15,
       },
       switchInfoWindow,
+      onMapInited,
+      getLayerInstance,
     };
   },
 });

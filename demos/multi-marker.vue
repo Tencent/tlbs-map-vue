@@ -1,17 +1,24 @@
 <template>
   <tlbs-map
-    ref="map"
+    ref="mapRef"
     api-key="OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"
     :center="center"
     :zoom="zoom"
     :control="control"
     @click="onClick"
+    @map_inited="onMapInited"
   >
     <tlbs-multi-marker
+      ref="markerRef"
       :geometries="geometries"
       :styles="styles"
       :options="options"
     />
+    <div class="control-container">
+      <button @click.stop="getLayerInstance">
+        打印点标记实例
+      </button>
+    </div>
   </tlbs-map>
 </template>
 
@@ -21,23 +28,39 @@ import { defineComponent, ref } from 'vue-demi';
 export default defineComponent({
   name: 'MarkerDemo',
   setup() {
-    const map = ref(null);
+    const mapRef = ref(null);
+    const markerRef = ref(null);
     const center = ref({ lat: 39.91799, lng: 116.397027 });
     const zoom = ref(10);
     const onClick = (e: Event) => {
       console.log(e);
     };
+
+    const onMapInited = () => {
+      // 地图加载完成后，可以获取地图实例、点标记实例，调用地图实例、点标记实例方法
+      console.log(mapRef.value.map);
+      console.log(markerRef.value.marker);
+    };
+
+    const getLayerInstance = () => {
+      // 可以获取点标记实例，调用点标记实例方法
+      console.log(markerRef.value.marker);
+    };
+
     return {
       center,
       zoom,
       onClick,
+      onMapInited,
+      getLayerInstance,
       control: {
         scale: {},
         zoom: {
           position: 'topRight',
         },
       },
-      map,
+      mapRef,
+      markerRef,
       geometries: [
         { styleId: 'marker',  position: { lat: 39.91799, lng: 116.397027 } },
       ],
@@ -56,4 +79,3 @@ export default defineComponent({
   },
 });
 </script>
-

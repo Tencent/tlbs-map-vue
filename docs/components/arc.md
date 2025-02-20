@@ -24,4 +24,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-|    arc      | `TMap.visualization.Arc` | 弧线图层实例。                                   |
+|    arc      | `TMap.visualization.Arc` | 弧线图层实例。 实例方法[参考](https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocArc)                                                                |

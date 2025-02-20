@@ -28,4 +28,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-| circle         | `TMap.MultiCircle` | 圆形实例。                                   |
+| circle         | `TMap.MultiCircle` | 圆形实例。实例方法[参考](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocVector#13)                                    |

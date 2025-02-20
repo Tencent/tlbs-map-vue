@@ -28,4 +28,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-|    area      | `TMap.visualization.Grid` | 网格热力图层实例。                                   |
+|    area      | `TMap.visualization.Grid` | 网格热力图层实例。实例方法[参考](https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocGrid)                                                  |

@@ -28,4 +28,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-| polygon         | `TMap.MultiPolygon` | 多边形实例。                                   |
+| polygon         | `TMap.MultiPolygon` | 多边形实例。实例方法[参考](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocVector#7)                                    |

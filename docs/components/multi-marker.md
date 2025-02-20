@@ -28,4 +28,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-| marker         | `TMap.MultiMarker` | 点标记实例。                                   |
+| marker         | `TMap.MultiMarker` | 点标记实例。实例方法[参考](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocMarker)                                                                 |

@@ -28,4 +28,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-| infoWindow         | `TMap.InfoWindow` | 信息窗口实例。     
+| infoWindow         | `TMap.InfoWindow` | 信息窗口实例。 实例方法[参考](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocInfo) |    

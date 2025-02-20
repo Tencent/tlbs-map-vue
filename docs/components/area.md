@@ -25,4 +25,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-|    area      | `TMap.visualization.Area` | 区域图层实例。                                   |
+|    area      | `TMap.visualization.Area` | 区域图层实例。实例方法[参考](https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocArea)                                    |

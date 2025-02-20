@@ -1,17 +1,24 @@
 <template>
   <tlbs-map
-    ref="map"
+    ref="mapRef"
     api-key="OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"
     :center="center"
     :zoom="zoom"
     :control="control"
     @click="onClick"
+    @map_inited="onMapInited"
   >
     <tlbs-multi-polyline
+      ref="polylineRef"
       :geometries="geometries"
       :styles="styles"
       :options="options"
     />
+    <div class="control-container">
+      <button @click.stop="getLayerInstance">
+        打印折线实例
+      </button>
+    </div>
   </tlbs-map>
 </template>
 
@@ -49,11 +56,22 @@ const rainbowPaths = [
 export default defineComponent({
   name: 'PolylineDemo',
   setup() {
-    const map = ref(null);
+    const mapRef = ref(null);
+    const polylineRef = ref(null);
     const center = ref({ lat: 40.040452, lng: 116.273486 });
     const zoom = ref(16);
     const onClick = (e: Event) => {
       console.log(e);
+    };
+    const onMapInited = () => {
+      // 地图加载完成后，可以获取地图实例、折线实例，调用地图实例、折线实例方法
+      console.log(mapRef.value.map);
+      console.log(polylineRef.value.polyline);
+    };
+
+    const getLayerInstance = () => {
+      // 可以获取折线实例，调用折线实例方法
+      console.log(polylineRef.value.polyline);
     };
     return {
       center,
@@ -65,7 +83,8 @@ export default defineComponent({
           position: 'topRight',
         },
       },
-      map,
+      mapRef,
+      polylineRef,
       geometries: [
         // 普通折线
         {
@@ -96,6 +115,8 @@ export default defineComponent({
       options: {
         zIndex: 1,
       },
+      onMapInited,
+      getLayerInstance,
     };
   },
 });

@@ -29,4 +29,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-| polyline         | `TMap.MultiPolyline` | 折线实例。                                   |
+| polyline         | `TMap.MultiPolyline` | 折线实例。实例方法[参考](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocVector#1)                                    |

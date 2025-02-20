@@ -1,17 +1,24 @@
 <template>
   <tlbs-map
-    ref="map"
+    ref="mapRef"
     api-key="OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"
     :center="center"
     :zoom="zoom"
     :control="control"
     @click="onClick"
+    @map_inited="onMapInited"
   >
     <tlbs-multi-polygon
+      ref="polygonRef"
       :geometries="geometries"
       :styles="styles"
       :options="options"
     />
+    <div class="control-container">
+      <button @click.stop="getLayerInstance">
+        打印多边形实例
+      </button>
+    </div>
   </tlbs-map>
 </template>
 
@@ -27,11 +34,22 @@ const paths = [
 export default defineComponent({
   name: 'PolygonDemo',
   setup() {
-    const map = ref(null);
+    const mapRef = ref(null);
+    const polygonRef = ref(null);
     const center = ref({ lat: 40.040452, lng: 116.273486 });
     const zoom = ref(16);
     const onClick = (e: Event) => {
       console.log(e);
+    };
+    const onMapInited = () => {
+      // 地图加载完成后，可以获取地图实例、多边形实例，调用地图实例、多边形实例方法
+      console.log(mapRef.value.map);
+      console.log(polygonRef.value.polygon);
+    };
+
+    const getLayerInstance = () => {
+      // 可以获取多边形实例，调用多边形实例方法
+      console.log(polygonRef.value.polygon);
     };
     return {
       center,
@@ -43,7 +61,8 @@ export default defineComponent({
           position: 'topRight',
         },
       },
-      map,
+      mapRef,
+      polygonRef,
       geometries: [
         {
           id: 'polygon', // 多边形图形数据的标志信息
@@ -65,6 +84,8 @@ export default defineComponent({
       options: {
         zIndex: 1,
       },
+      onMapInited,
+      getLayerInstance,
     };
   },
 });

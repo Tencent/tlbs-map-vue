@@ -1,11 +1,12 @@
 <template>
   <tlbs-map
-    ref="map"
+    ref="mapRef"
     api-key="OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"
     :center="center"
     :zoom="zoom"
     :control="control"
     @click="handleClick"
+    @map_inited="onMapInited"
   >
     <div style="position: absolute;top: 0;left: 0;z-index: 2000;">
       <button
@@ -78,7 +79,7 @@ const paths = [
 export default defineComponent({
   name: 'GeometryEditorDemo',
   setup() {
-    const map = ref(null);
+    const mapRef = ref(null);
     const center = ref({ lat: 40.040452, lng: 116.273486 });
     const zoom = ref(17);
     const editorRef = ref<any>(null);
@@ -105,16 +106,22 @@ export default defineComponent({
       console.log(editorRef.value.editor.getOverlayList());
     };
 
+    const onMapInited = () => {
+      // 地图加载完成后，可以获取地图实例，调用地图实例方法
+      console.log(mapRef.value.map);
+    };
+
     return {
       center,
       zoom,
+      onMapInited,
       control: {
         scale: {},
         zoom: {
           position: 'topRight',
         },
       },
-      map,
+      mapRef,
       editorRef,
       geometries: [
         {

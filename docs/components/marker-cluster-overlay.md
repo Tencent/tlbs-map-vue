@@ -37,4 +37,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-| markerCluster          | `TMap.MarkerCluster` | 点聚合实例。                                   |
+| markerCluster          | `TMap.MarkerCluster` | 点聚合实例。实例方法[参考](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocCluster)                                   |

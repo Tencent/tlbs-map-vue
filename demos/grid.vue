@@ -1,13 +1,15 @@
 <template>
   <tlbs-map
-    ref="map"
+    ref="mapRef"
     api-key="OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"
     :center="center"
     :zoom="zoom"
     :control="control"
     @click="onClick"
+    @map_inited="onMapInited"
   >
     <tlbs-grid
+      ref="gridRef"
       :data="heatData"
       :extrudable="true"
       :side-length="1000"
@@ -17,6 +19,11 @@
       :options="options"
       :select-options="selectOptions"
     />
+    <div class="control-container">
+      <button @click.stop="getLayerInstance">
+        打印网格图实例
+      </button>
+    </div>
   </tlbs-map>
 </template>
 
@@ -26,7 +33,8 @@ import { defineComponent, ref, onMounted } from 'vue-demi';
 export default defineComponent({
   name: 'GridDemo',
   setup() {
-    const map = ref(null);
+    const mapRef = ref(null);
+    const gridRef = ref(null);
     const center = ref({ lat: 39.909897147274364, lng: 116.39756310116866 });
     const zoom = ref(11);
     const heatData = ref([]);
@@ -39,6 +47,17 @@ export default defineComponent({
       heatData.value = (window as any).heatData || [];
     });
 
+    const onMapInited = () => {
+      // 地图加载完成后，可以获取地图实例、网格图实例，调用地图实例、网格图实例方法
+      console.log(mapRef.value.map);
+      console.log(gridRef.value.grid);
+    };
+
+    const getLayerInstance = () => {
+      // 可以获取网格图实例，调用网格图实例方法
+      console.log(gridRef.value.grid);
+    };
+
     return {
       center,
       zoom,
@@ -49,7 +68,8 @@ export default defineComponent({
           position: 'topRight',
         },
       },
-      map,
+      mapRef,
+      gridRef,
       // @ts-ignore
       heatData,
       options: {
@@ -60,6 +80,8 @@ export default defineComponent({
         style: '#E9AB1D',
         enableHighlight: false, // 是否使用高亮效果
       },
+      onMapInited,
+      getLayerInstance,
     };
   },
 });

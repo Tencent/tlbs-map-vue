@@ -1,18 +1,25 @@
 
 <template>
   <tlbs-map
-    ref="map"
+    ref="mapRef"
     api-key="OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"
     :center="center"
     :zoom="zoom"
     :control="control"
+    @map_inited="onMapInited"
   >
     <tlbs-dot
+      ref="dotRef"
       :data="dotData"
       :styles="styles"
       :select-options="selectOptions"
       @click="onClick"
     />
+    <div class="control-container">
+      <button @click.stop="getLayerInstance">
+        打印散点图实例
+      </button>
+    </div>
   </tlbs-map>
 </template>
 
@@ -22,7 +29,8 @@ import { defineComponent, onMounted, ref } from 'vue-demi';
 export default defineComponent({
   name: 'DotDemo',
   setup() {
-    const map = ref(null);
+    const mapRef = ref(null);
+    const dotRef = ref(null);
     const center = ref({ lat: 39.984104, lng: 116.307503 });
     const zoom = ref(8);
     const dotData = ref([]);
@@ -36,6 +44,17 @@ export default defineComponent({
       console.log(e.detail.dot);
     };
 
+    const onMapInited = () => {
+      // 地图加载完成后，可以获取地图实例、散点图实例，调用地图实例、散点图实例方法
+      console.log(mapRef.value.map);
+      console.log(dotRef.value.dot);
+    };
+
+    const getLayerInstance = () => {
+      // 可以获取散点图实例，调用散点图实例方法
+      console.log(dotRef.value.dot);
+    };
+
     return {
       center,
       zoom,
@@ -45,7 +64,8 @@ export default defineComponent({
           position: 'topRight',
         },
       },
-      map,
+      mapRef,
+      dotRef,
       dotData,
       styles: {
         type: 'circle', // 圆形样式
@@ -62,6 +82,8 @@ export default defineComponent({
         enableHighlight: false, // 是否使用高亮效果
       },
       onClick,
+      onMapInited,
+      getLayerInstance,
     };
   },
 });

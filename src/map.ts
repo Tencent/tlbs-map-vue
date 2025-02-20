@@ -8,6 +8,7 @@ import {
   PropType,
   watch,
   isVue2,
+  nextTick,
 } from 'vue-demi';
 import useEventListener from './composables/useEventListener';
 import { prefix } from './config';
@@ -80,6 +81,7 @@ export default defineComponent({
   name: `${prefix}Map`,
   inheritAttrs: isVue2,
   props,
+  emits: ['map_inited'],
   setup(props, context) {
     const ele = ref<HTMLDivElement | null>(null);
     const map = ref<TMap.Map | null>(null);
@@ -101,6 +103,9 @@ export default defineComponent({
           maxZoom: props.maxZoom,
         });
         map.value = mapInstance;
+        nextTick(() => {
+          context.emit('map_inited', mapInstance);
+        });
         // 绑定地图事件
         useEventListener(mapInstance, context);
         // 设置地图控件显示

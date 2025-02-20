@@ -28,4 +28,4 @@
 
 | 名称            | 类型                         | 说明                                                 |
 | --------------- | ---------------------------- | ---------------------------------------------------- |
-|    heat      | `TMap.visualization.Heat` | 热力图层实例。                                   |
+|    heat      | `TMap.visualization.Heat` | 热力图层实例。实例方法[参考](https://lbs.qq.com/webApi/visualizationApi/visualizationDoc/visualizationDocHeat)                                         |
