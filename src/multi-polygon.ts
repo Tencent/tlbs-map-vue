@@ -93,11 +93,16 @@ export default defineComponent({
   },
 });
 // 获取地图api所需样式
-export function getStyle(options: { [key: string]: TMap.PolygonStyle }): TMap.MultiPolygonStyleHash {
+export function getStyle(options: { [key: string]: TMap.PolygonStyle |  TMap.ExtrudablePolygonStyle }): TMap.MultiPolygonStyleHash {
   const style: TMap.MultiPolygonStyleHash = {};
 
   Object.keys(options).forEach((key) => {
-    style[key] = new TMap.PolygonStyle(options[key]);
+    // 判断是否包含高度相关属性来决定使用哪种样式类
+    if ('extrudeHeight' in options[key]) {
+      style[key] = new TMap.ExtrudablePolygonStyle(options[key] as TMap.ExtrudablePolygonStyleOptions);
+    } else {
+      style[key] = new TMap.PolygonStyle(options[key] as TMap.PolygonStyleOptions);
+    }
   });
   return style;
 }
