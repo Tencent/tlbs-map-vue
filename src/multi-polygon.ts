@@ -93,7 +93,8 @@ export default defineComponent({
   },
 });
 // 获取地图api所需样式
-export function getStyle(options: { [key: string]: TMap.PolygonStyle |  TMap.ExtrudablePolygonStyle }): TMap.MultiPolygonStyleHash {
+export function getStyle(options:
+{ [key: string]: TMap.PolygonStyle |  TMap.ExtrudablePolygonStyle }): TMap.MultiPolygonStyleHash {
   const style: TMap.MultiPolygonStyleHash = {};
 
   Object.keys(options).forEach((key) => {
