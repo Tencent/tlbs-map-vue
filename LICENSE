@@ -1,6 +1,6 @@
 Tencent is pleased to support the open source community by making tlbs-map-vue available. 
 
-Copyright (C) 2024 THL A29 Limited, a Tencent company.  All rights reserved. 
+Copyright (C) 2024 Tencent.  All rights reserved. 
 
 tlbs-map-vue is licensed under the MIT License except for the third-party components listed below.
 
@@ -23,86 +23,86 @@ Open Source Software Licensed under the MIT License:
 1. @commitlint/cli
 Copyright (c) 2016 - present Mario Nebl
 
-2. @commitlint/config-conventional
+1. @commitlint/config-conventional
 Copyright (c) 2016 - present Mario Nebl
 
-3. @types/node
+1. @types/node
 Copyright (c) Microsoft Corporation.
 
-4. @vitejs/plugin-vue
+1. @vitejs/plugin-vue
 Copyright (c) 2019-present, Yuxi (Evan) You and Vite contributors
 
-5. @vitejs/plugin-vue2
+1. @vitejs/plugin-vue2
 Copyright (c) 2019-present, Yuxi (Evan) You and contributors
 
-6. @vue/composition-api
+1. @vue/composition-api
 Copyright (c) 2019-present, liximomo(X.L)
 
-7. @vue/eslint-config-typescript
+1. @vue/eslint-config-typescript
 Copyright (c) 2018-present Evan You
 
-8. commitizen
+1. commitizen
 Copyright (c) commitizen original author and authors
 
-9. cz-conventional-changelog
+1. cz-conventional-changelog
 Copyright (c) 2015-2018 Commitizen Contributors
 
-10. eslint
+1.  eslint
 Copyright JS Foundation and other contributors, https://js.foundation
 
-11. eslint-plugin-vue
+1.  eslint-plugin-vue
 Copyright (c) 2017 Toru Nagashima
 
-12. fs-extra
+1.  fs-extra
 Copyright (c) 2011-2017 JP Richardson
 
-13. husky
+1.  husky
 Copyright (c) 2021 typicode
 
-14. lint-staged
+1.  lint-staged
 Copyright (c) 2016 Andrey Okonetchnikov
 
-15. vite
+1.  vite
 Copyright (c) 2019-present, Yuxi (Evan) You and Vite contributors
 
-16. vite-plugin-dts
+1.  vite-plugin-dts
 Copyright (c) 2021-present qmhc
 
-17. vite-plugin-vue2
+1.  vite-plugin-vue2
 Copyright (c) vite-plugin-vue2 original author and authors
 
-18. vitepress
+1.  vitepress
 Copyright (c) 2019-present, Yuxi (Evan) You
 
-19. vitest
+1.  vitest
 Copyright (c) 2021-Present Anthony Fu <https://github.com/antfu>
 Copyright (c) 2021-Present Matias Capeletto <https://github.com/patak-dev>
 
-20. vue-demi
+1.  vue-demi
 Copyright (c) 2020-present, Anthony Fu
 
-21. vue-template-compiler
+1.  vue-template-compiler
 Copyright (c) 2013-present, Yuxi (Evan) You
 
-22. vue
+1.  vue
 Copyright (c) 2018-present, Yuxi (Evan) You
 
-23. @babel/eslint-parser
+1.  @babel/eslint-parser
 Copyright (c) 2014-present Sebastian McKenzie and other contributors
 
-24. eslint-plugin-chalk
+1.  eslint-plugin-chalk
 Copyright (c) 2020 Jens Simon
 
-25. eslint-plugin-import
+1.  eslint-plugin-import
 Copyright (c) 2015 Ben Mosher
 
-26. @babel/core
+1.  @babel/core
 Copyright (c) 2014-present Sebastian McKenzie and other contributors
 
-27. eslint-plugin-prettier
+1.  eslint-plugin-prettier
 Copyright © 2017 Andres Suarez and Teddy Katz
 
-28. prettier
+1.  prettier
 Copyright © James Long and contributors
 
 
