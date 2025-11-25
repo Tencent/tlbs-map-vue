@@ -9,6 +9,7 @@ import {
   watch,
   isVue2,
   nextTick,
+  toRaw,
 } from 'vue-demi';
 import useEventListener from './composables/useEventListener';
 import { prefix } from './config';
@@ -180,7 +181,7 @@ export default defineComponent({
     return {
       ele,
       get map() {
-        return mapInstance;
+        return isVue2 ? toRaw(mapRef) : toRaw(mapRef.value);
       },
       mapRef,
     };
