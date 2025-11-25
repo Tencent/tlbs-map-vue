@@ -4,6 +4,9 @@ spline: explain
 toc: false
 docClass: timeline
 ---
+## 🌈 1.3.2 `2025-11-25`
+- 地图组件返回map实例修改为原始gl地图实例，避免调用某些实例api时报错
+
 ## 🌈 1.3.1 `2025-03-11`
 - Polygon多边形组件支持设置拔起样式
 
