@@ -67,4 +67,4 @@
 |on(eventName:String, listener:Function)	|this	|添加listener到eventName事件的监听器数组中。|
 |off(eventName:String, listener:Function)	|this	|从eventName事件的监听器数组中移除指定的listener。|
 | destroy()	| 	| 销毁图层对象。 |
-| eraseTo(id: String, index: Number, point:[LatLng](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocClass#1))	| 	| 用于线的擦除。第一个参数id 表示指定geometry的ID，擦除效果仅对该id对应的路线有效。 <br>第二个参数index表示要擦除到的坐标索引  index  。<br>第三个参数指线段 （坐标索引为[ index -1 ,  index ] ）上擦除点的经纬度坐标（ 如果这个坐标不在擦除的索引范围内，会一直擦除到坐标索引为index的点 ）。只支持简单折线。[查看示例](/webDemoCenter/glAPI/glMarker/markerMoveAlong) |
+| eraseTo(id: String, index: Number, point:[LatLng](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocClass#1))	| 	| 用于线的擦除。第一个参数id 表示指定geometry的ID，擦除效果仅对该id对应的路线有效。 <br>第二个参数index表示要擦除到的坐标索引  index  。<br>第三个参数指线段 （坐标索引为[ index -1 ,  index ] ）上擦除点的经纬度坐标（ 如果这个坐标不在擦除的索引范围内，会一直擦除到坐标索引为index的点 ）。只支持简单折线。[查看示例](https://lbs.qq.com/webDemoCenter/glAPI/glMarker/markerMoveAlong) |

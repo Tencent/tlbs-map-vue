@@ -48,7 +48,7 @@ interface Control {
 |doubleClickZoom	|Boolean	|是否支持双击缩放地图，默认为true。|
 |mapZoomType	|[MAP_ZOOM_TYPE](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#8)	|地图缩放焦点控制。|
 |boundary	|[LatLngBounds](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocClass#2)	|地图边界，设置后拖拽、缩放等操作无法将地图移动至边界外，默认为null。|
-|mapStyleId	|String	|地图样式ID，有效值为”style[编号]”，与key绑定，详见 [个性化地图配置页面](/dev/console/custom/mapStyle)。|
+|mapStyleId	|String	|地图样式ID，有效值为”style[编号]”，与key绑定，详见 [个性化地图配置页面](https://lbs.qq.com/dev/console/custom/mapStyle)。|
 |baseMap	|BaseMap I BaseMap[]	|地图底图，BaseMap目前只支持矢量底图 （[VectorBaseMap](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#5)） 、卫星底图 （[SatelliteBaseMap](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#6)） 、路况底图 （[TrafficBaseMap](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#7)） ，可以使用数组形式实现多种底图叠加。默认为 [VectorBaseMap](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#5) ，如果传入null地图不显示任何地物。|
 |viewMode	|String	|地图视图模式，支持2D和3D，默认为3D。2D模式下不可对地图进行拖拽旋转，pitch和rotation始终保持为0。|
 |showControl	|Boolean	|是否显示地图上的控件，默认true。|
@@ -157,11 +157,11 @@ clip	|[ClipOptions](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#Cli
 |off(eventName:String, listener:Function)	|this	|从eventName事件的监听器数组中移除指定的listener。|
 | once(eventName:String, listener:Function)	|this	|添加listener到eventName事件的监听器数组中，一次性监听，listener执行一次后自动移除监听器|
 | moveLayer(layerId: String, level: [LAYER_LEVEL](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#9)) | this | 修改图层层级顺序，根据输入 LAYER_LEVEL 常量调整 layerId 对应图层的渲染层级 ，其中layerId可以通过图层getId方法获取。注： 设置ZIndex 可调整同一大类层级下的不同图层顺序，此方法则是调整目标图层的大类层级。
-| startAnimation(keyFrames:[ MapKeyFrame[]](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#mapKeyFrame), opts: [ AnimationOptions](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#animationOptions)) | none   | 开始动画，通过keyFrames定义关键帧 ，[查看示例](/webDemoCenter/glAPI/glCityView/glAroundView)          |
+| startAnimation(keyFrames:[ MapKeyFrame[]](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#mapKeyFrame), opts: [ AnimationOptions](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#animationOptions)) | none   | 开始动画，通过keyFrames定义关键帧 ，[查看示例](https://lbs.qq.com/webDemoCenter/glAPI/glCityView/glAroundView)          |
 | stopAnimation()                            | none   | 停止动画，停止后无法通过resumeAnimation恢复 |
 | pauseAnimation()            | none   | 暂停动画                                      |
 | resumeAnimation()              | none   | 恢复动画                                      |
-| enableAreaHighlight(opts: [highlightOptions](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#highlightOptions)) | this   | 启用地图区域高亮功能， [查看示例](/webDemoCenter/glAPI/glMap/glRegionHighlight) |
+| enableAreaHighlight(opts: [highlightOptions](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#highlightOptions)) | this   | 启用地图区域高亮功能， [查看示例](https://lbs.qq.com/webDemoCenter/glAPI/glMap/glRegionHighlight) |
 | disableAreaHighlight() | this   | 禁用地图区域高亮功能 |
 | enableAreaClip(opts: [ClipOptions](https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#ClipOptions)) | this | 启用地图区域掩膜功能 |
 | disableAreaClip()                 | this | 停用地图区域掩膜功能 |
