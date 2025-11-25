@@ -9,6 +9,7 @@ import {
   watch,
   isVue2,
   nextTick,
+  toRaw,
 } from 'vue-demi';
 import useEventListener from './composables/useEventListener';
 import { prefix } from './config';
@@ -84,8 +85,8 @@ export default defineComponent({
   emits: ['map_inited'],
   setup(props, context) {
     const ele = ref<HTMLDivElement | null>(null);
-    const map = ref<TMap.Map | null>(null);
-    let mapInstance: TMap.Map;
+    const mapRef = ref<TMap.Map | null>(null);
+    let mapInstance: TMap.Map | null = null;
 
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
     onMounted(async () => {
@@ -102,12 +103,15 @@ export default defineComponent({
           minZoom: props.minZoom,
           maxZoom: props.maxZoom,
         });
-        map.value = mapInstance;
+        mapRef.value = mapInstance;
         nextTick(() => {
-          context.emit('map_inited', mapInstance);
+          if (mapInstance) {
+            context.emit('map_inited', mapInstance);
+          }
         });
         // 绑定地图事件
-        useEventListener(mapInstance, context);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        useEventListener(mapInstance, context as any);
         // 设置地图控件显示
         (Object.keys(props.control) as ControlKey[]).forEach((key: ControlKey) => {
           let controlId: TMap.constants.DEFAULT_CONTROL_ID;
@@ -123,11 +127,11 @@ export default defineComponent({
               break;
           }
           if (!props.control[key]) {
-            mapInstance.removeControl(controlId);
+            mapInstance?.removeControl(controlId);
             return;
           }
           if (typeof props.control[key] === 'object') {
-            const control = mapInstance.getControl(controlId);
+            const control = mapInstance?.getControl(controlId);
             const { position, className, numVisible } = props.control[key] as ControlConfig;
             const CONTROL_POSITION: {
               [key: string]: TMap.constants.CONTROL_POSITION;
@@ -142,8 +146,8 @@ export default defineComponent({
               bottomCenter: TMap.constants.CONTROL_POSITION.BOTTOM_CENTER,
               bottomRight: TMap.constants.CONTROL_POSITION.BOTTOM_RIGHT,
             };
-            CONTROL_POSITION[position] && control.setPosition(CONTROL_POSITION[position]);
-            className && control.setClassName(className);
+            CONTROL_POSITION[position] && control?.setPosition(CONTROL_POSITION[position]);
+            className && control?.setClassName(className);
             numVisible && (control as TMap.ZoomControl).setNumVisible(numVisible);
           }
         });
@@ -173,10 +177,13 @@ export default defineComponent({
       },
     );
     // 提供给子组件地图实例
-    provide('map', map);
+    provide('map', mapRef);
     return {
-      map,
       ele,
+      get map() {
+        return isVue2 ? toRaw(mapRef) : toRaw(mapRef.value);
+      },
+      mapRef,
     };
   },
   render() {
@@ -187,12 +194,21 @@ export default defineComponent({
       // @ts-ignore
       style: this.style,
     };
+    // 处理插槽内容，避免嵌套三元表达式
+    let slotContent: unknown[] = [];
+    if (this.$slots.default && this.mapRef) {
+      if (isVue2) {
+        slotContent = this.$slots.default as unknown as unknown[];
+      } else {
+        slotContent = (this.$slots.default as () => unknown[])();
+      }
+    }
+
     return h(
       'div',
       props,
-      // eslint-disable-next-line no-nested-ternary
       // @ts-ignore
-      this.$slots.default && this.map ? (isVue2 ? this.$slots.default : this.$slots.default()) : [],
+      slotContent,
     );
   },
 });

@@ -16,5 +16,3 @@
 | visible | Boolean                              | 是否可见       |
 | position | `{lat: Number;lng: Number}` | DOM 的经纬度位置 |
 | offset   | `{x:Number, y:Number}`      | DOM 中心偏移量   |
-
-参考官网文档 https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocDomOverlay
